@@ -1,0 +1,38 @@
+.title-container {
+    position: relative;
+    display: inline-block;
+}
+
+.title-container .curve-decor {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    top: -30px;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.9;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+}
+
+.skills-grid .flex img {
+    transition: transform 0.3s ease-in-out;
+    display: block;
+}
+
+.skills-grid .flex:hover img {
+    transform: scale(1.05);
+}
+
+
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

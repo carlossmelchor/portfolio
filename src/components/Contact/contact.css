@@ -1,0 +1,59 @@
+.title-container {
+    position: relative;
+    display: inline-block;
+}
+
+.title-container .sparkle-decor {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: -20px;
+    left: -20%;
+    z-index: 1;
+    animation: blink 3s infinite;
+}
+
+.title-container .crown-decor {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: -40px;
+    left: 80%;
+    z-index: 1;
+    animation: tilt 3s ease-in-out infinite;
+}
+
+.btn-container {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-container .plane-decor {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: -20px;
+    left: -60%;
+    z-index: 1;
+}
+
+.slide-out {
+    animation: slideOut 2s forwards;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-100%, -100%);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    #contact img {
+        display: none;
+    }
+}

@@ -1,0 +1,164 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes tilt {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(.9); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes bobbing {
+    0%, 100% {
+        top: 0px;
+    }
+    50% {
+        top: -10px;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Stars Container */
+.crafting-container {
+    position: relative;
+    display: inline-block;
+}
+
+.crafting-container .stars-decor {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: -40px;
+    left: -30%;
+    z-index: 1;
+    animation: blink 2s infinite;
+}
+
+/* Crayon Shade 1 Container */
+.digital-container {
+    position: relative;
+    display: inline-block;
+}
+
+.digital-container .crayon-decor {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+    animation: slide 2s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+/* Crayon Shade 2 Container */
+.creative-container {
+    position: relative;
+    display: inline-block;
+}
+
+.creative-container .shade-decor {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: -30px;
+    left: -20%;
+    z-index: -1;
+    animation: pulse 4s infinite ease-in-out;
+    opacity: 0.9;
+}
+
+.creative-container .arrow-decor {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: -65px;
+    left: 80%;
+    animation: slide 2.5s infinite ease-in-out;
+}
+
+/* Single Star Container */
+.touch-container {
+    position: relative;
+    display: inline-block;
+}
+
+.touch-container .single-decor {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    top: -20px;
+    left: 75%;
+    animation: tilt 3s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+/* Name Container */
+.name-container {
+    position: relative;
+    display: inline-block;
+}
+
+.name-container .oval-decor {
+    position: absolute;
+    width: 300px !important;
+    height: auto !important;
+    top: -30px;
+    left: 15%;
+}
+
+/* Hobby Container */
+.hobby-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hobby-container .curve-decor {
+    position: absolute;
+    width: 300px !important;
+    height: auto !important;
+    top: -30px;
+    left: 30%;
+}
+
+/* Plane Container */
+.plane-container {
+    position: relative;
+    display: inline-block;
+}
+
+.plane-container .plane-decor {
+    position: absolute;
+    width: 75px !important;
+    height: auto !important;
+    top: 0px;
+    left: 100%;
+    animation: bobbing 3s ease-in-out infinite;
+}
+
+@media (max-width: 500px) {
+    #header img {
+        display: none;
+    }
+}

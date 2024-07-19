@@ -1,0 +1,74 @@
+@keyframes slide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(7px); }
+}
+
+@keyframes tilt {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.link-container {
+    position: relative;
+    display: inline-block;
+}
+
+.link-container .oval-decor {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    top: -40px;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.9;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.link-container:hover .oval-decor {
+    transform: scale(1.5);
+}
+
+.link-container .link-decor {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: -40px;
+    left: 110%;
+    z-index: -1;
+    opacity: 0.9;
+    animation: slide 3s infinite ease-in-out;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container .cat-decor {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: -30px;
+    left: 0%;
+    z-index: 1;
+    opacity: 0.9;
+    animation: tilt 3s ease-in-out infinite;
+}
+
+.image-container .diamonds-decor {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 250px;
+    left: 50%;
+    z-index: 1;
+    opacity: 0.9;
+    animation: tilt 3s ease-in-out infinite;
+}
+
+@media (max-width: 500px) {
+    #about img.sm-hidden {
+        display: none;
+    }
+}

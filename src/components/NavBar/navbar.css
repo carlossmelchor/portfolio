@@ -1,0 +1,7 @@
+nav {
+    max-height: 120px;
+}
+nav img{
+    max-height: 40px;
+    width: auto;
+}
